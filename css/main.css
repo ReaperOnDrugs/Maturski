@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clBG: rgb(16, 16, 16);
+  --clBG2: rgb(28, 28, 28);
+  --clLET: rgb(196, 196, 196);
+  --cl2: rgb(183, 142, 55);
+  --cl3: rgb(160, 183, 55);
+  --cl4: rgb(183, 78, 55);
+}
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--clBG);
+}
+
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: var(--clBG2);
+  transition: height 0.2s, width 0.2s linear;
+}
+#nav * {
+  transition: height 0.5s, width 0.5s linear;
+}
+#nav-selections {
+  height: 100vh;
+  position: fixed;
+  z-index: 102;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#nav-selections div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--clLET);
+}
+#nav-selections div:hover {
+  cursor: pointer;
+}
+#nav-selector {
+  height: 6vh;
+  width: 0.2vh;
+  background-color: var(--cl2);
+  position: fixed;
+  left: 7vh;
+  top: 10vh;
+}
+
+.navDef {
+  width: 7vh;
+}
+.navIcoDef {
+  width: 6vh;
+  height: 6vh;
+  font-size: 5vh;
+}
+.navOPEN {
+  width: 20vh;
+}
+.navIcoOP {
+  width: 19vh;
+  height: 19vh;
+  font-size: 18vh;
+}
