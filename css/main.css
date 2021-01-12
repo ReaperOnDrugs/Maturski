@@ -24,6 +24,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: white;
+  transition: background-color 0.3s ease-in-out;
 }
 #nav-logo {
   height: 10vh;
@@ -41,6 +42,7 @@ body {
   font-family: "tienne";
   color: #00241b;
   user-select: none;
+  border-radius: 5vh;
 }
 .nav-s::before {
   content: "\2001";
@@ -51,21 +53,66 @@ body {
 .nav-s span {
   cursor: pointer;
 }
-#nav-Start {
+.nav-s:hover {
+  background-color: #b59955;
+  color: white;
+}
+.nav-Start {
   background-color: #00241b;
   color: white;
-  border-radius: 5vh;
+
   cursor: pointer;
+}
+.nav-s-D {
+  color: white;
+}
+.nav-Start-D {
+  background-color: white;
+  color: #00241b;
+}
+#tlAnimContW {
+  width: 100vw;
+  height: 60vh;
+  margin-top: 40vh;
+  overflow: hidden;
+}
+#content {
+  position: relative;
+  width: 100vw;
+  height: 300vh;
 }
 #tlAnimCont {
   position: relative;
   width: 100vw;
   height: 60vh;
-  margin-top: 40vh;
+  margin-top: 0vh;
+  transition: margin-top 0.3s ease-in-out;
   background-image: url(../assets/SVG/Subtract.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+}
+#tlAnimLetters {
+  margin-top: 20vh;
+}
+#tlAnimLetters .pp {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation-name: letters;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 @font-face {
   font-family: tienne;
   src: url(../assets/fonts/Tienne-Regular.otf);
+}
+@keyframes letters {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
 }
