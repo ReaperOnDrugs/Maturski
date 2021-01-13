@@ -1,11 +1,13 @@
-let isSc = false;
 let tlanimc = document.getElementById("tlAnimCont").style;
 let nav = document.getElementById("nav");
 let logo = document.getElementById("logoID");
 
-window.onscroll = function () {
-    if (window.scrollY > 2 && isSc == false){
-        isSc = true;
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+/*window.onscroll = function () {
+    if (window.scrollY > 2){
         tlanimc.setProperty("margin-top","-60vh");
         nav.style.setProperty("background-color","#00241b");
 
@@ -20,8 +22,7 @@ window.onscroll = function () {
         }
         j[j.length-1].classList.add("nav-Start-D");
     }
-    else if (window.scrollY < 2 && isSc == true){
-        isSc = false;
+    else if (window.scrollY < 2){
         tlanimc.setProperty("margin-top","0vh");
         nav.style.setProperty("background-color","white");
 
@@ -36,4 +37,4 @@ window.onscroll = function () {
         }
         j[j.length-1].classList.remove("nav-Start-D");
     }
-}
+}*/

@@ -5,24 +5,25 @@
         <link rel="shortcut icon" href="favicon.svg">
         <meta charset="utf8">
         <link rel="stylesheet" href="./css/main.css">
-        <script defer src="./js/main.js"></script>
+        <script defer type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/navActions.js"></script>
     </head>
     <body>
         <div id="nav">
             <div id="nav-logo">
-                <object id="logoID" data="./assets/SVG/vehicle-steering-wheel.svg" type="image/svg+xml"> </object>
+                <object id="logoID" data="./assets/SVG/vehicle-steering-wheel.svg" type="image/svg+xml"> Vas browser ne podrzava svg slike </object>
             </div>
-            <div id="nav-Home" class="nav-s">
-               <span> Home </span>
+            <div id="nav-Home" class="nav-s" onclick="Home()">
+               <span> Početna </span>
             </div>
-            <div id="nav-Contact" class="nav-s">
-               <span> Contact </span>
+            <div id="nav-Questions" class="nav-s" onclick="Questions()">
+                <span> Pitanja </span>
             </div>
             <div id="nav-Start" class="nav-s nav-Start">
-                <span> Start </span>
+                <span> Počni test </span>
             </div>
         </div>
-        <div id="content">
+        <div id="content" onload="Home()">
             <div id="tlAnimContW">
                 <div id="tlAnimCont">
                     <svg id="tlAnimLetters" width="70vw" height="40vh" viewBox="0 0 414 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,6 +49,27 @@
                         <path class="pp" d="M399.499 52L388.987 32.92H386.035V52H373.723V1.45599H394.387C398.371 1.45599 401.755 2.15199 404.539 3.54399C407.371 4.93599 409.483 6.85599 410.875 9.30399C412.267 11.704 412.963 14.392 412.963 17.368C412.963 20.728 412.003 23.728 410.083 26.368C408.211 29.008 405.427 30.88 401.731 31.984L413.395 52H399.499ZM386.035 24.208H393.667C395.923 24.208 397.603 23.656 398.707 22.552C399.859 21.448 400.435 19.888 400.435 17.872C400.435 15.952 399.859 14.44 398.707 13.336C397.603 12.232 395.923 11.68 393.667 11.68H386.035V24.208Z" stroke="white" stroke-width="4" stroke-linejoin="bevel" mask="url(#path-1-inside-1)"/>
                         </svg>                                                 
                 </div>
+            </div>
+            <div class="content-divider">
+                <div class="content-text">
+                    Sva pitanja iz knjiga na jednom mjestu <br/>
+                    Dostupno bilo kad <br/>
+                    Bilo gde
+                </div>
+                <div class="content-image">
+                    <object data="./assets/SVG/undraw_education_f8ru.svg" style="height: 40vh; width: 40vh; float: right; margin-right: 2vw;" type="image/svg+xml"> </object>
+                </div>
+            </div>
+            <div class="content-divider" style="margin-top: 20vh;">
+                <div class="content-text" style="margin-left: calc(40vh + 5vw);">
+                    <a>Ponovi pitanja</a> i izaberi jedan od <a>testova</a> da provjeris svoje znanje
+                </div>
+                <div class="content-image">
+                    <object data="./assets/SVG/undraw_researching_22gp.svg" style="height: 40vh; width: 40vh; margin-left: 2vw;" type="image/svg+xml">  </object>
+                </div>
+            </div>
+            <div id="footer">
+                All rights received @2021
             </div>
         </div>
     </body>
