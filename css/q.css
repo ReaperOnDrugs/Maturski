@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+
+  font-family: "tienne";
+}
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: white;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::-moz-selection {
+  color: white;
+  background: #b59955;
+}
+::selection {
+  color: white;
+  background: #b59955;
+}

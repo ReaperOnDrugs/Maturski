@@ -1,0 +1,47 @@
+#nav {
+  position: fixed;
+  z-index: 100;
+  height: 11vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #00241b;
+  transition: background-color 0.3s ease-in-out;
+}
+#nav-logo {
+  height: 10vh;
+  width: 10vh;
+  margin-left: 2vh;
+  margin-right: auto;
+}
+.nav-s {
+  height: 8vh;
+  margin-right: 2vh;
+  font-size: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  user-select: none;
+  border-radius: 5vh;
+}
+.nav-s::before {
+  content: "\2001";
+}
+.nav-s::after {
+  content: "\2001";
+}
+.nav-s span {
+  cursor: pointer;
+}
+.nav-s:hover {
+  background-color: #b59955;
+  color: white;
+}
+.nav-Start {
+  background-color: white;
+  color: #00241b;
+
+  cursor: pointer;
+}

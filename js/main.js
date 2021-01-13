@@ -6,7 +6,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
-/*window.onscroll = function () {
+window.onscroll = function () {
     if (window.scrollY > 2){
         tlanimc.setProperty("margin-top","-60vh");
         nav.style.setProperty("background-color","#00241b");
@@ -37,4 +37,4 @@ window.onbeforeunload = function () {
         }
         j[j.length-1].classList.remove("nav-Start-D");
     }
-}*/
+}
