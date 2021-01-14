@@ -22,15 +22,15 @@
         </div>
         <table border="1" style="margin-top: 50vh">
             <?php
-                $con = mysql_connect("localhost","root","");
-                $db = mysql_select_db("exodriverdb",$con);
-                $q = "SELECT p, bro
+                $con = mysqli_connect("localhost", "root", "", "exodriverdb");
+
+                $q = "SELECT *
                         FROM pitanja";
-                $res = mysql_query($q);
-                while ($red = mysql_fetch_array($res)){
+                $res = mysqli_query($con, $q);
+                while ($row = mysqli_fetch_array($res)){
                     echo "<tr>
-                        <td> $red[0] </td>
-                        <td> $red[1] </td>
+                        <td> $row[0] </td>
+                        <td> $row[1] </td>
                     </tr>";
                 }
             ?>

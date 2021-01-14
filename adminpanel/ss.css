@@ -6,6 +6,14 @@
 ::-webkit-scrollbar {
   display: none;
 }
+::-moz-selection {
+  color: white;
+  background: #b59955;
+}
+::selection {
+  color: white;
+  background: #b59955;
+}
 #content {
   height: 100vh;
   width: 100vw;
