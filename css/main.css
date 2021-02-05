@@ -52,6 +52,7 @@ body {
   color: #00241b;
   user-select: none;
   border-radius: 5vh;
+  transition: background-color 0.2s ease-in-out;
 }
 .nav-s::before {
   content: "\2001";

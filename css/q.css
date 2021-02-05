@@ -25,7 +25,57 @@ body {
   background: #b59955;
 }
 table {
-  width: 100vw;
-  min-height: 50vh;
+  margin-left: 5vw;
+  width: 80vw;
   font-size: 3vh;
+  background-color: #1d4239;
+  color: white;
+  border: none;
+  border-spacing: 0 2vh;
+}
+td {
+  border-bottom: 0.3vh solid #00241b;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.table-question {
+  background-color: #b59955;
+}
+#content {
+  margin-top: 15vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#q-drop,
+#s-drop {
+  width: 90vw;
+  overflow: hidden;
+  margin-top: 3vh;
+}
+.drop-header {
+  width: 90vw;
+  height: 15vh;
+  background-color: #1d4239;
+  display: flex;
+  align-items: center;
+  padding-left: 2vh;
+  font-size: 5vh;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+}
+.drop-header:hover {
+  cursor: pointer;
+}
+.table-set {
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s linear;
+}
+.table-hid {
+  opacity: 0;
+  visibility: collapse;
 }
