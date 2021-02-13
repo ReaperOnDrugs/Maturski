@@ -17,7 +17,7 @@
             <div id="nav-Home" class="nav-s" onclick="Home()">
                <span> Početna </span>
             </div>
-            <div id="nav-Start" class="nav-s nav-Start">
+            <div id="nav-Start" class="nav-s nav-Start" onclick="setupStart()">
                 <span> Počni test </span>
             </div>
         </div>

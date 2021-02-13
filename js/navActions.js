@@ -4,3 +4,6 @@ function Home(){
 function Questions() {
     location.href = "q.php";
 }
+function setupStart() {
+    location.href = "setup.html";
+}

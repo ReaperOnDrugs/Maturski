@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> ExoDriver </title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="./css/secondaryNav.css">
+        <link rel="stylesheet" href="./css/setup.css">
+        <script defer src="./js/navActions.js"></script>
+        <script defer src="./js/setupActions.js"></script>
+    </head>
+    <body>
+        <div id="nav">
+            <div id="nav-logo">
+                <object id="logoID" data="./favicon.svg" type="image/svg+xml"> Vas browser ne podrzava svg slike </object>
+            </div>
+            <div id="nav-Contact" class="nav-s">
+                <span> Kontakt </span>
+            </div>
+            <div id="nav-Questions" class="nav-s" onclick="Questions()">
+                <span> Pitanja </span>
+            </div>
+            <div id="nav-Home" class="nav-s" onclick="Home()">
+                <span> Početna </span>
+            </div>
+        </div>
+        <div id="contentBox">
+            <div id="cat-tabs">
+                <div class="tabs-op tabs-sel" onclick="tabSwitch(0)"> Kategorija A </div>
+                <div class="tabs-op" onclick="tabSwitch(1)"> Kategorija B </div>
+                <div class="tabs-op" onclick="tabSwitch(2)"> Kategorija C </div>
+                <div class="tabs-op" onclick="tabSwitch(3)"> Prva Pomoc </div>
+            </div>
+            <div id="cat-cont">
+                <div class="tabs-cont tabs-c-vis">
+                    <div class="desc"> Testovi za polaganje za A i A<sub>1</sub> kategorije (motor i moped) </div>
+                    <div class="btn" onclick="toA()"> Pokreni Test </div>
+                </div>
+                <div class="tabs-cont">
+                    <div class="desc"> Testovi za polaganje za B kategoriju (automobil) </div>
+                    <div class="btn" onclick="toB()"> Pokreni Test </div>
+                </div>
+                <div class="tabs-cont">
+                    <div class="desc"> Testovi za polaganje za C i C<sub>1</sub> kategorije (kamion i kamion do 7.5t). Potrebno je znati B kategoriju za ovaj test </div>
+                    <div class="btn" onclick="toC()"> Pokreni Test </div>
+                </div>
+                <div class="tabs-cont">
+                    <div class="desc"> Testovi za polaganje prve pomoci. Ukupno 100 pitanja koja imaju samo jedan tacan odgovor </div>
+                    <div class="btn" onclick="toM()"> Pokreni Test </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

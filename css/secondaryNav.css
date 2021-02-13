@@ -46,3 +46,8 @@
 
   cursor: pointer;
 }
+
+@font-face {
+  font-family: tienne;
+  src: url(../assets/fonts/Tienne-Regular.otf);
+}

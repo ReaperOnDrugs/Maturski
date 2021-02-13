@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "tienne";
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::-moz-selection {
+  color: white;
+  background: #b59955;
+}
+::selection {
+  color: white;
+  background: #b59955;
+}
+
+#contentBox {
+  position: fixed;
+  width: 70vw;
+  margin-left: 15vw;
+  height: 70vh;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #00241b;
+}
+#cat-tabs {
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+#cat-cont {
+  height: 70vh;
+  width: 40vw;
+  background-color: #1d4239;
+}
+.tabs-op {
+  width: 30vw;
+  height: 17vh;
+  border-bottom: 0.2vh solid #b59955;
+  border-top: 0.2vh solid #b59955;
+  border-right: 0.4vh solid #b59955;
+  transition: border-right 0.2s, background-color 0.2s, height 0.2s,
+    font-size 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 5vh;
+  user-select: none;
+}
+.tabs-op:nth-child(1) {
+  border-top: none;
+}
+.tabs-op:nth-child(4) {
+  border-bottom: none;
+}
+.tabs-op:hover {
+  cursor: pointer;
+  background-color: #003024;
+}
+.tabs-sel {
+  background-color: #1d4239;
+  border-right: 0.4vh solid #b5985500;
+  height: 19vh;
+  font-size: 6vh;
+}
+
+.tabs-cont {
+  height: 70vh;
+  width: 40vw;
+  display: none;
+}
+.tabs-c-vis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc {
+  width: 40vw;
+  height: 50vh;
+  color: white;
+  font-size: 4vh;
+  overflow-wrap: break-word;
+  text-align: center;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 10vh;
+}
+.btn {
+  height: 15vh;
+  width: 30vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #b59855b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 8vh;
+  user-select: none;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 2vh;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #b59955;
+}
+
+@font-face {
+  font-family: tienne;
+  src: url(../assets/fonts/Tienne-Regular.otf);
+}
