@@ -31,6 +31,7 @@
             <div class="back_btn"> <span onclick="back()">Nazad</span>  <span>Obrisi podatke</span> </div>
             <form action="sig.php" method="POST">
                 <input type="text" class="ui_input" name="img_p" placeholder="Naziv slike znaka" autocomplete="off" autocorrect="off" spellcheck="false">
+                <input type="text" class="ui_input" name="question" placeholder="Pitanje" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_1" placeholder="Odgovor 1" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_2" placeholder="Odgovor 2" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_3" placeholder="Odgovor 3" autocomplete="off" autocorrect="off" spellcheck="false">
@@ -45,6 +46,7 @@
             <div class="back_btn"> <span onclick="back()">Nazad</span>  <span>Obrisi podatke</span> </div>
             <form action="crs.php" method="POST">
                 <input type="text" class="ui_input" name="img_p" placeholder="Naziv slike raskrsnice" autocomplete="off" autocorrect="off" spellcheck="false">
+                <input type="text" class="ui_input" name="question" placeholder="Pitanje" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_1" placeholder="Odgovor 1" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_2" placeholder="Odgovor 2" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_3" placeholder="Odgovor 3" autocomplete="off" autocorrect="off" spellcheck="false">

@@ -36,7 +36,7 @@
     }
 
     $q = "INSERT INTO pitanja (ques, ans1, ans2, ans3, ans4, ans5, correct, isA, isB, isC)
-        VALUES ('" .$question. "','" .$a1. "','" .$a2. "','" .$a3. "','" .$a4. "','" .$a5. "','" .$correct. "',";/*true,true,true);";*/
+        VALUES ('$question','$a1','$a2','$a3','$a4','$a5','$correct',";
     if ($isA){
         $q = $q."true,";
     }

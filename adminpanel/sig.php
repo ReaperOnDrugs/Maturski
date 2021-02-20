@@ -1,5 +1,6 @@
 <?php
     $image_path = $_POST['img_p'];
+    $question = $_POST['question'];
     $a1 = $_POST['ans_1'];
     $a2 = $_POST['ans_2'];
     $a3 = $_POST['ans_3'];
@@ -35,8 +36,8 @@
         die("Connection failed: ".mysqli_connect_error());
     }
 
-    $q = "INSERT INTO znakovi (img_p, ans1, ans2, ans3, ans4, ans5, correct, isA, isB, isC)
-        VALUES ('" .$image_path. "','" .$a1. "','" .$a2. "','" .$a3. "','" .$a4. "','" .$a5. "','" .$correct. "',";/*true,true,true);";*/
+    $q = "INSERT INTO znakovi (ques, path, ans1, ans2, ans3, ans4, ans5, correct, isA, isB, isC)
+        VALUES ('$question','$image_path','$a1','$a2','$a3','$a4','$a5','$correct',";
     if ($isA){
         $q = $q."true,";
     }
