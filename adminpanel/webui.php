@@ -38,7 +38,6 @@
                 <input type="text" class="ui_input" name="ans_4" placeholder="Odgovor 4" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_5" placeholder="Odgovor 5" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="correct" placeholder="Tacni odgovori. Unijeti samo redni broj odgovora" autocomplete="off" autocorrect="off" spellcheck="false">
-                <input type="text" class="ui_input" name="category" placeholder="Kategorije (ABC)" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="submit" class="ui_input" value="Dodaj Znak">
             </form>
         </div>
@@ -53,7 +52,6 @@
                 <input type="text" class="ui_input" name="ans_4" placeholder="Odgovor 4" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="ans_5" placeholder="Odgovor 5" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="text" class="ui_input" name="correct" placeholder="Tacni odgovori. Unijeti samo redni broj odgovora" autocomplete="off" autocorrect="off" spellcheck="false">
-                <input type="text" class="ui_input" name="category" placeholder="Kategorije (ABC)" autocomplete="off" autocorrect="off" spellcheck="false">
                 <input type="submit" class="ui_input" value="Dodaj Raskrsnicu">
             </form>
         </div>

@@ -30,9 +30,12 @@
         }
     }
 
-    $con = mysqli_connect("localhost", "root", "", "exodriverdb");
-    if (!$con) {
-        die("Connection failed: ".mysqli_connect_error());
+    $con = new mysqli("localhost", "root", "", "exodriverdb");
+    if ($con -> connect_errno) {
+        echo "Connection failed: " . $con -> connect_error;
+    }
+    if (!$con->set_charset("utf8")) {
+        printf("Error loading character set utf8: %s\n", $con->error);
     }
 
     $q = "INSERT INTO pitanja (ques, ans1, ans2, ans3, ans4, ans5, correct, isA, isB, isC)
@@ -56,10 +59,10 @@
         $q = $q."false);";
     }
 
-    if (mysqli_query($con, $q)) {
+    if ($con -> query($q)) {
         echo "New record created successfully";
     }
     else {
-        echo "Error: " . $q . "<br>" . mysqli_error($con);
+        echo "Query error";
     }
 ?>

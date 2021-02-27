@@ -26,13 +26,21 @@
                 <div class="drop-header" onclick="toggleQdrop()"> Pitanja </div>
                 <table border="1" class="table-hid table-set">
                     <?php
-                        $con = mysqli_connect("localhost", "root", "", "exodriverdb");
+                        $con = new mysqli("localhost", "root", "", "exodriverdb");
+                        
+                        if ($con -> connect_errno){
+                            echo "Connection died" . $con -> connect_error;
+                            exit();
+                        }
+                        if (!$con->set_charset("utf8")) {
+                            printf("Error loading character set utf8: %s\n", $con->error);
+                        }
 
                         $q = "SELECT *
                                 FROM pitanja";
-                        $res = mysqli_query($con, $q);
+                        $res = $con -> query($q);
                         $ind = 1;
-                        while ($row = mysqli_fetch_array($res)){
+                        while ($row = $res -> fetch_row()){
                             echo "<tr>
                                 <td rowspan='2' style='text-align: center'> $ind </td>
                                 <td class='table-question' style='padding-left: 2vh; border-bottom: none'> $row[1] </td>
@@ -49,11 +57,6 @@
                 <div class="drop-header" onclick="toggleSdrop()"> Znakovi </div>
                 <table border="1" class="table-hid table-set">
                     <?php
-                        $con = mysqli_connect("localhost", "root", "", "exodriverdb");
-
-                        $q = "SELECT *
-                                FROM pitanja";
-                        $res = mysqli_query($con, $q);
                         $ind = 1;
                         while ($row = mysqli_fetch_array($res)){
                             echo "<tr>

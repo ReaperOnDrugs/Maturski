@@ -2,15 +2,16 @@
 <html>
     <head>
         <title> ExoDriver </title>
-        <meta charset="utf8">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="../favicon.svg">
         <link rel="stylesheet" href="../css/test.css">
         <link rel="stylesheet" href="../css/tests-inter.css">
         <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
     </head>
 <?php
-    $numOfQ = 5;
-    $numOfS = 2;
-    $numOfR = 2;
+    $numOfQ = 20;
+    $numOfS = 10;
+    $numOfR = 10;
     $curQ = 0;
 
     $con = new mysqli("localhost","root","","exodriverdb");
@@ -18,8 +19,11 @@
         echo "Connection to server has been lost: " . $con -> connect_error;
         exit();
     }
+    if (!$con->set_charset("utf8")) {
+        printf("Error loading character set utf8: %s\n", $con->error);
+    }
 
-    $res = $con -> query("SELECT ID FROM pitanja");
+    $res = $con -> query("SELECT ID FROM pitanja WHERE isA = true");
 
     $tmpArray = [];
     $quesArray = [];

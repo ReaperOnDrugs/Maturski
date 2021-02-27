@@ -9,13 +9,13 @@ window.onload = function() {
             loadID();
         }
     }
-    xtp.open("GET","../js/obj/A.json","true");
+    xtp.open("GET","../js/obj/AB.json","true");
     xtp.send();
 }
 
 function loadID() {
     let docs = document.querySelectorAll(".question1");
-    for (let i = 0; i < 9; i++){
+    for (let i = 0; i < 40; i++){
         let com = "OBJ.ans" + i + ".id = docs[" + i + "].id";
         eval(com);
     }
@@ -60,7 +60,7 @@ function closeFullscr(elem){
 
 function Checkup() {
     let isDone = true;
-    for (let i = 0; i < 9; i++){
+    for (let i = 0; i < 40; i++){
         let ans = "";
         let com = "ans = OBJ.ans" + i + ".ans";
         eval(com);
