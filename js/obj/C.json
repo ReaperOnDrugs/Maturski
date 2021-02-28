@@ -1,5 +1,5 @@
 {
-    "qc" : 40,
+    "qc" : 25,
     "ans0" : {
         "id" : "",
         "ans" : "",
@@ -103,99 +103,149 @@
     "ans20" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans21" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans22" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans23" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans24" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans25" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans26" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans27" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans28" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans29" : {
         "id" : "",
         "ans" : "",
-        "type" : "2"
+        "type" : "1"
     },
     "ans30" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans31" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans32" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans33" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans34" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans35" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans36" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans37" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans38" : {
         "id" : "",
         "ans" : "",
-        "type" : "3"
+        "type" : "2"
     },
     "ans39" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "2"
+    },
+    "ans40" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans41" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans42" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans43" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans44" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans45" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans46" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans47" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans48" : {
+        "id" : "",
+        "ans" : "",
+        "type" : "3"
+    },
+    "ans49" : {
         "id" : "",
         "ans" : "",
         "type" : "3"

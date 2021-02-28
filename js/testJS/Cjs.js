@@ -9,13 +9,13 @@ window.onload = function() {
             loadID();
         }
     }
-    xtp.open("GET","../js/obj/AB.json","true");
+    xtp.open("GET","../js/obj/C.json","true");
     xtp.send();
 }
 
 function loadID() {
     let docs = document.querySelectorAll(".question1");
-    for (let i = 0; i < 40; i++){
+    for (let i = 0; i < 45; i++){
         let com = "OBJ.ans" + i + ".id = docs[" + i + "].id";
         eval(com);
     }
@@ -72,7 +72,6 @@ function Checkup() {
         }
     }
     if (isDone){
-        localStorage.setItem("ansJSON",JSON.stringify(OBJ));
         location.href = "../results.html";
     }
 }

@@ -4,8 +4,38 @@
         <title> ExoDriver </title>
         <link rel="shortcut icon" href="favicon.svg">
         <meta charset="utf8">
+        <link rel="stylesheet" href="./css/secondaryNav.css">
+        <link rel="stylesheet" href="./css/results.css">
+        <script defer src="./js/navActions.js"></script>
     </head>
     <body>
-        
+        <div id="nav">
+            <div id="nav-logo">
+                <object id="logoID" data="./favicon.svg" type="image/svg+xml"> Vas browser ne podrzava svg slike </object>
+            </div>
+            <div id="nav-Contact" class="nav-s">
+                <span> Kontakt </span>
+            </div>
+            <div id="nav-Questions" class="nav-s" onclick="Questions()">
+                <span> Pitanja </span>
+            </div>
+            <div id="nav-Home" class="nav-s" onclick="Home()">
+                <span> Početna </span>
+            </div>
+        </div>
+        <div id="container">
+            <div id="overall">
+                <div id="score"><span id="sc-us">104</span>/<span id="max">108</span></div>
+                <div id="sc-txt">Prosao</div>
+            </div>
+            <!--<div id="mis">
+                <div class="mistake">
+                    <div class="q"></div>
+                    <div class="us-a"></div>
+                    <div class="cor"></div>
+                </div>
+            </div>-->
+        </div>
     </body>
+    <script defer src="./js/checker.js"></script>
 </html>
