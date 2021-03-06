@@ -6,12 +6,14 @@
         <meta charset="utf8">
         <link rel="stylesheet" href="./css/secondaryNav.css">
         <link rel="stylesheet" href="./css/results.css">
+        <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
         <script defer src="./js/navActions.js"></script>
     </head>
     <body>
+        <div id="loader" class="loaderS"> <img src="favicon.svg"> </div>
         <div id="nav">
             <div id="nav-logo">
-                <object id="logoID" data="./favicon.svg" type="image/svg+xml"> Vas browser ne podrzava svg slike </object>
+                <object id="logoID" data="./favicon.svg" type="image/svg+xml"> Vaš browser ne podržava svg slike </object>
             </div>
             <div id="nav-Contact" class="nav-s">
                 <span> Kontakt </span>
@@ -25,16 +27,14 @@
         </div>
         <div id="container">
             <div id="overall">
-                <div id="score"><span id="sc-us">104</span>/<span id="max">108</span></div>
-                <div id="sc-txt">Prosao</div>
+                <div id="score"><span id="sc-us">...</span>/<span id="max">...</span></div>
+                <div id="sc-txt">...</div>
             </div>
-            <!--<div id="mis">
-                <div class="mistake">
-                    <div class="q"></div>
-                    <div class="us-a"></div>
-                    <div class="cor"></div>
-                </div>
-            </div>-->
+            <div id="mis" style="display: none;">
+                <div class="mis-title"> Greške: </div>
+                <div class="mis-legend"> Tačni odgovori: <i class="fas fa-square"></i> </div>
+                <div class="mis-legend"> Netačni odgovori: <i class="fas fa-square"></i> </div>
+            </div>
         </div>
     </body>
     <script defer src="./js/checker.js"></script>

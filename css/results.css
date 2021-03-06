@@ -1,6 +1,6 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
   font-family: "tienne";
 }
@@ -8,6 +8,7 @@ html,
 body {
   min-height: 100vh;
   background-color: white;
+  padding-bottom: 2vh;
 }
 ::-webkit-scrollbar {
   width: 2vh;
@@ -34,8 +35,8 @@ body {
 
 #container {
   float: left;
-  width: 100vw;
-  min-height: 89vh;
+  width: 99vw;
+  min-height: 90vh;
   margin-top: 11vh;
   display: flex;
   flex-direction: column;
@@ -61,7 +62,107 @@ body {
   align-items: center;
 }
 
+#mis {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  float: left;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 20vh;
+  background-color: #1d4239;
+  border-radius: 2vh;
+}
+.mis-title {
+  font-size: 5vh;
+}
+.mis-legend {
+  display: flex;
+  align-items: center;
+  margin-top: 1vh;
+  color: rgba(255, 255, 255, 0.5);
+}
+.mis-legend i {
+  margin-left: 1vw;
+  font-size: 3vh;
+  color: gray;
+}
+.mis-legend:nth-child(2) i {
+  color: #ad8d43;
+}
+.mis-legend:nth-child(3) i {
+  color: red;
+}
+
+.er {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 3vh;
+  border-bottom: 0.5vh solid black;
+  padding-bottom: 1vh;
+  padding-bottom: 3vh;
+}
+.er:last-child {
+  border-bottom: none;
+}
+.er div {
+  width: 60vw;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 0.8vh;
+}
+.er-q {
+  font-size: 4vh;
+}
+.er-img img {
+  height: 20vh;
+}
+.er-correct span {
+  background-color: #ad8d43;
+  height: fit-content;
+}
+.er-incorrect span {
+  background-color: red;
+}
+
+#loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+  background-color: #1d4239;
+  transition: 0.2s opacity linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loaderS {
+  opacity: 1;
+}
+.loaderE {
+  opacity: 0;
+}
+#loader img {
+  height: 50vh;
+  animation-name: rot;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 @font-face {
   font-family: tienne;
   src: url(../assets/fonts/Tienne-Regular.otf);
+}
+@keyframes rot {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
