@@ -1,34 +1,28 @@
 let OBJ;
-let qCount;
+let qCount = 10;
 let serverAnswers = [];
 let incorrect = [];
-let maxP;
-let curP;
-let minP;
+let maxP = 10;
+let curP = 10;
+let minP = 8;
 let returnCounter = 0;
 
 window.onload = function() {
-    let proxy = localStorage.getItem("ansJSON");
+    let proxy = localStorage.getItem("MansJSON");
     if ((proxy == null) || (proxy == undefined)){
         alert("Results not detected, you will now be redirected to the home page");
         location.href = "./index.html";
     }
     OBJ = JSON.parse(proxy);
-    qCount = OBJ.qc;
-    maxP = OBJ.maxP;
-    curP = OBJ.maxP;
-    minP = OBJ.minP;
     callAnswers();
 }
 
 function callAnswers() {
     let ansStr = "";
-    let typeStr = "";
+    let typeStr = "4:4:4:4:4:4:4:4:4:4:";
     for (let i=0; i<qCount; i++){
         let com = "ansStr = ansStr + OBJ.ans" + i + ".id + ':'";
-        let com2 = "typeStr = typeStr + OBJ.ans" + i + ".type + ':'";
         eval(com);
-        eval(com2);
     }
     
     let xtp = new XMLHttpRequest();
@@ -58,26 +52,12 @@ function processResponse(str){
 }
 
 function checkDiff() {
-    let str1 = "";
-    let str2 = "";
-    for (let i=0; i<qCount; i++){
-        eval("str1 = OBJ.ans" + i + ".ans");
-        str2 = serverAnswers[i];
-        let err = false;
-        for (let j = 0; j<str1.length; j++){
-            if (str2.search(str1[j]) == -1){
-                incorrect.push(i);
-                err = true;
-                break;
-            }
-        }
-        if (!err) {
-            for(let j = 0; j<str2.length; j++){
-                if (str1.search(str2[j]) == -1){
-                    incorrect.push(i);
-                    break;
-                }
-            }
+    for (let i = 0; i<serverAnswers.length; i++){
+        let str;
+        com = "str = OBJ.ans" + i + ".ans";
+        eval(com);
+        if (str != serverAnswers[i]){
+            incorrect.push(i);
         }
     }
     if (incorrect.length > 0){
@@ -88,37 +68,25 @@ function checkDiff() {
 }
 
 function deduct() {
-    let type;
     for (let i=0; i<incorrect.length; i++){
-        eval("type = OBJ.ans" + incorrect[i] + ".type");
-        if (type == 1){
-            curP -= 2;
-        }
-        else if (type == 2){
-            curP -= 3;
-        }
-        else {
-            curP -= 5;
-        }
+        curP--;
         listout(incorrect[i]);
     }
     document.getElementById("sc-us").innerHTML = curP;
-    document.getElementById("max").innerHTML = maxP;
     if (curP >= minP){
         document.getElementById("sc-txt").innerHTML = "Prosao";
     }
     else {
         document.getElementById("sc-txt").innerHTML = "Pao";
     }
-    localStorage.removeItem("ansJSON");
+    localStorage.removeItem("MansJSON");
 }
 
 function listout(id) {
     let i;
-    let t;
+    let t = 4;
     let doc = document.getElementById("mis");
     eval("i = OBJ.ans" + id + ".id");
-    eval("t = OBJ.ans" + id + ".type");
 
     let xtp = new XMLHttpRequest();
 

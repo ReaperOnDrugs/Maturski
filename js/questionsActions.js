@@ -1,5 +1,6 @@
 let togQ = false;
 let togS = false;
+let togC = false;
 
 function toggleQdrop(){
     let a = document.getElementById("q-drop");
@@ -24,5 +25,18 @@ function toggleSdrop(){
     else {
         b.classList.remove("table-hid");
         togS = true;
+    }
+}
+
+function toggleCdrop(){
+    let a = document.getElementById("c-drop");
+    let b = a.querySelector("table");
+    if (togC){
+        b.classList.add("table-hid");
+        togC = false;
+    }
+    else {
+        b.classList.remove("table-hid");
+        togC = true;
     }
 }

@@ -31,16 +31,31 @@ table {
   background-color: #1d4239;
   color: white;
   border: none;
-  border-spacing: 0 2vh;
+  border-collapse: collapse;
 }
 td {
-  border-bottom: 0.3vh solid #00241b;
+  border-bottom: 0.2vh solid black;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-collapse: separate;
+  border-spacing: 0 2vh;
 }
-.table-question {
+.td-question {
+  padding-left: 5vh;
+  font-size: 4vh;
+  font-weight: bold;
+}
+.td-correct,
+.td-incorrect {
+  padding-left: 2vh;
+  font-size: 3vh;
+}
+.td-correct {
   background-color: #b59955;
+}
+.td-incorrect {
+  background-color: rgb(165, 22, 22);
 }
 #content {
   margin-top: 15vh;
@@ -51,7 +66,8 @@ td {
   align-items: center;
 }
 #q-drop,
-#s-drop {
+#s-drop,
+#c-drop {
   width: 90vw;
   overflow: hidden;
   margin-top: 3vh;

@@ -23,10 +23,46 @@
             FROM znakovi
             WHERE ID=$id";
     }
-    else {
+    else if ($type == 3){
         $q = "SELECT ques, ans1, ans2, ans3, ans4, ans5, correct, path
             FROM raskrsnice
             WHERE ID=$id";
+    }
+    else {
+        $q = "SELECT ques, ans1, ans2, ans3, correct
+            FROM ppomoc
+            WHERE ID=$id";
+        $res = $con -> query($q);
+        $row = $res -> fetch_row();
+
+        $return = "<div class='er'><div class='er-q'> $row[0] </div><div class='er-ans ";
+
+        $iden = gettype(strpos($row[4],"1"));
+        if ($iden == "boolean"){
+            $return = $return . "er-incorrect'> <span>$row[1]</span> </div>";
+        }
+        else {
+            $return = $return . "er-correct'> <span>$row[1]</span> </div>";
+        }
+
+        $iden = gettype(strpos($row[4],"2"));
+        if ($iden == "boolean"){
+            $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
+        }
+        else {
+            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
+        }
+
+        $iden = gettype(strpos($row[4],"3"));
+        if ($iden == "boolean"){
+            $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
+        }
+        else {
+            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
+        }
+
+        echo $return;
+        exit();
     }
 
     $res = $con -> query($q);
@@ -35,41 +71,41 @@
 
     $return = "<div class='er'><div class='er-q'> $row[0] </div><div class='er-ans ";
 
-    $iden = strpos($row[6],"1");
-    if (!is_numeric($iden)){
+    $iden = gettype(strpos($row[6],"1"));
+    if ($iden == "boolean"){
         $return = $return . "er-incorrect'> <span>$row[1]</span> </div>";
     }
     else {
         $return = $return . "er-correct'> <span>$row[1]</span> </div>";
     }
 
-    $iden = strpos($row[6],"2");
-    if (is_numeric($iden)){
+    $iden = gettype(strpos($row[6],"2"));
+    if ($iden == "boolean"){
         $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
     }
     else {
-        $return = $return . "<div class='er-ans er-incorrect ". $iden ."'> <span>$row[2]</span> </div>";
+        $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
     }
 
     if ($row[3] != ""){
-        $iden = strpos($row[6],"3");
-        if (is_numeric($iden)){
+        $iden = gettype(strpos($row[6],"3"));
+        if ($iden == "boolean"){
             $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
         }
         else {
             $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
         }
         if ($row[4] != ""){
-            $iden = strpos($row[6],"4");
-            if (is_numeric($iden)){
+            $iden = gettype(strpos($row[6],"4"));
+            if ($iden == "boolean"){
                 $return = $return . "<div class='er-ans er-correct'> <span>$row[4]</span> </div>";
             }
             else {
                 $return = $return . "<div class='er-ans er-incorrect'> <span>$row[4]</span> </div>";
             }
             if ($row[5] != ""){
-                $iden = strpos($row[6],"5");
-                if (is_numeric($iden)){
+                $iden = gettype(strpos($row[6],"5"));
+                if ($iden == "boolean"){
                     $return = $return . "<div class='er-ans er-correct'> <span>$row[5]</span> </div>";
                 }
                 else {

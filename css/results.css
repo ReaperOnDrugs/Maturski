@@ -93,7 +93,7 @@ body {
   color: #ad8d43;
 }
 .mis-legend:nth-child(3) i {
-  color: red;
+  color: rgb(165, 22, 22);
 }
 
 .er {
@@ -127,7 +127,7 @@ body {
   height: fit-content;
 }
 .er-incorrect span {
-  background-color: red;
+  background-color: rgb(165, 22, 22);
 }
 
 #loader {

@@ -45,8 +45,11 @@
         else if ($types[$i] == "2"){
             $q = $q . "znakovi ";
         }
-        else {
+        else if ($types[$i] == "3"){
             $q = $q . "raskrsnice ";
+        }
+        else {
+            $q = $q . "ppomoc ";
         }
 
         $q = $q . "WHERE ID = " . $ansIDs[$i];
