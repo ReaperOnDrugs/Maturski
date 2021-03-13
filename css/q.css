@@ -54,9 +54,6 @@ td {
 .td-correct {
   background-color: #b59955;
 }
-.td-incorrect {
-  background-color: rgb(165, 22, 22);
-}
 #content {
   margin-top: 15vh;
   width: 100vw;

@@ -79,7 +79,6 @@ function deduct() {
     else {
         document.getElementById("sc-txt").innerHTML = "Pao";
     }
-    localStorage.removeItem("MansJSON");
 }
 
 function listout(id) {
@@ -110,4 +109,8 @@ function listout(id) {
     xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xtp.send("t="+ t +"&i="+ i);
     returnCounter++;
+}
+
+window.onunload = function() {
+    localStorage.removeItem("MansJSON");
 }

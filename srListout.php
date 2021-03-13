@@ -47,18 +47,18 @@
 
         $iden = gettype(strpos($row[4],"2"));
         if ($iden == "boolean"){
-            $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
+            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
         }
         else {
-            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
+            $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
         }
 
         $iden = gettype(strpos($row[4],"3"));
         if ($iden == "boolean"){
-            $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
+            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
         }
         else {
-            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
+            $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
         }
 
         echo $return;
@@ -81,35 +81,35 @@
 
     $iden = gettype(strpos($row[6],"2"));
     if ($iden == "boolean"){
-        $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
+        $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
     }
     else {
-        $return = $return . "<div class='er-ans er-incorrect'> <span>$row[2]</span> </div>";
+        $return = $return . "<div class='er-ans er-correct'> <span>$row[2]</span> </div>";
     }
 
     if ($row[3] != ""){
         $iden = gettype(strpos($row[6],"3"));
         if ($iden == "boolean"){
-            $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
+            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
         }
         else {
-            $return = $return . "<div class='er-ans er-incorrect'> <span>$row[3]</span> </div>";
+            $return = $return . "<div class='er-ans er-correct'> <span>$row[3]</span> </div>";
         }
         if ($row[4] != ""){
             $iden = gettype(strpos($row[6],"4"));
             if ($iden == "boolean"){
-                $return = $return . "<div class='er-ans er-correct'> <span>$row[4]</span> </div>";
+                $return = $return . "<div class='er-ans er-incorrect'> <span>$row[4]</span> </div>";
             }
             else {
-                $return = $return . "<div class='er-ans er-incorrect'> <span>$row[4]</span> </div>";
+                $return = $return . "<div class='er-ans er-correct'> <span>$row[4]</span> </div>";
             }
             if ($row[5] != ""){
                 $iden = gettype(strpos($row[6],"5"));
                 if ($iden == "boolean"){
-                    $return = $return . "<div class='er-ans er-correct'> <span>$row[5]</span> </div>";
+                    $return = $return . "<div class='er-ans er-incorrect'> <span>$row[5]</span> </div>";
                 }
                 else {
-                    $return = $return . "<div class='er-ans er-incorrect'> <span>$row[5]</span> </div>";
+                    $return = $return . "<div class='er-ans er-correct'> <span>$row[5]</span> </div>";
                 }
             }
         }
