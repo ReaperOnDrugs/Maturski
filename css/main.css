@@ -120,7 +120,7 @@ body {
 .content-divider {
   position: relative;
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   background-color: #1d4239;
 }
 .content-text {
@@ -133,8 +133,8 @@ body {
   width: calc(100vw - 40vh);
 }
 .content-image {
-  margin-top: -20vh;
-  height: 40vh;
+  margin-top: -10vh;
+  height: 50vh;
   width: 100vw;
   user-select: none;
 }

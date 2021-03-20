@@ -23,8 +23,8 @@
 
     $res = $con -> query("SELECT ID FROM ppomoc");
 
-    $tmpArray = [];
-    $quesArray = [];
+    $tmpArray = array();
+    $quesArray = array();
     
     while ($row = $res -> fetch_row()){
         array_push($tmpArray, $row[0]);

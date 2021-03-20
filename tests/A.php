@@ -25,8 +25,8 @@
 
     $res = $con -> query("SELECT ID FROM pitanja WHERE isA = true");
 
-    $tmpArray = [];
-    $quesArray = [];
+    $tmpArray = array();
+    $quesArray = array();
     
     while ($row = $res -> fetch_row()){
         array_push($tmpArray, $row[0]);
@@ -66,8 +66,8 @@
     #Generate signs
     $res = $con -> query("SELECT ID FROM znakovi");
 
-    $tmpArray = [];
-    $quesArray = [];
+    $tmpArray = array();
+    $quesArray = array();
     
     while ($row = $res -> fetch_row()){
         array_push($tmpArray, $row[0]);
@@ -100,8 +100,8 @@
     #Generate crossroads
     $res = $con -> query("SELECT ID FROM raskrsnice");
 
-    $tmpArray = [];
-    $quesArray = [];
+    $tmpArray = array();
+    $quesArray = array();
     
     while ($row = $res -> fetch_row()){
         array_push($tmpArray, $row[0]);
