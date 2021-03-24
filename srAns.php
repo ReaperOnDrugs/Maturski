@@ -3,8 +3,8 @@
     $ansIDsPROXY = $_POST['i'];
     $return = "";
 
-    $types = [];
-    $ansIDs = [];
+    $types = array();
+    $ansIDs = array();
 
     $proxy = "";
     for ($i = 0; $i<strlen($typesPROXY); $i++){
