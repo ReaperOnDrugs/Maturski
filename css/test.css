@@ -13,6 +13,9 @@ body {
   flex-direction: column;
   padding-bottom: 5vh;
 }
+:root {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 2vh;
 }
