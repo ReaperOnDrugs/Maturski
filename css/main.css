@@ -10,7 +10,8 @@
 html,
 body {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
+  /*overflow-x: hidden;*/
   background-color: white;
 }
 ::-webkit-scrollbar {
@@ -130,7 +131,7 @@ body {
   font-size: 6vh;
   font-weight: bold;
   height: 20vh;
-  width: calc(100vw - 40vh);
+  width: calc(98vw - 45vh);
 }
 .content-image {
   margin-top: -10vh;
